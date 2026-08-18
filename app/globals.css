@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  --header-height: 82px;
+  --bg-primary: #F7F3E8;
+  --bg-cream: #FFFDF7;
+  --text-charcoal: #171717;
+  --text-muted: #77736A;
+  --accent-champagne: #E8C766;
+  --accent-gold: #D9C98A;
+  --border-light: #D8D2C4;
+  --border-dark: rgba(247, 243, 232, 0.12);
+}
+
+@theme {
+  --color-primary-bg: #F7F3E8;
+  --color-cream: #FFFDF7;
+  --color-charcoal: #171717;
+  --color-charcoal-light: #242320;
+  --color-charcoal-card: #1E1D1A;
+  --color-champagne: #E8C766;
+  --color-champagne-light: #F4E4A8;
+  --color-champagne-dark: #C9A745;
+  --color-soft-gold: #D9C98A;
+  --color-muted-text: #77736A;
+  --color-muted-dark: #A39F93;
+  --color-border-light: #D8D2C4;
+  --color-border-dark: rgba(247, 243, 232, 0.12);
+  --font-display: var(--font-display), "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F7F3E8;
+  color: #171717;
+}
+
+body {
+  background-color: #F7F3E8;
+  color: #171717;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selection Highlight */
+::selection {
+  background-color: #E8C766;
+  color: #171717;
+}
+
+/* Typography styles */
+.font-display {
+  font-family: var(--font-display), "Cinzel", "Playfair Display", Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Heading clamp classes */
+.h1-hero {
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+.h2-editorial {
+  font-size: clamp(38px, 4.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.h3-title {
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.15;
+}
+
+.body-editorial {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #77736A;
+}
+
+.eyebrow-text {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #77736A;
+}
+
+.nav-text {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Section Spacing Utilities */
+.section-padding {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+}
+
+.container-luxury {
+  width: 100%;
+  max-width: 1360px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container-luxury {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-luxury {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+/* Hide scrollbar for clean horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glassmorphism custom blur */
+.glass-nav {
+  background: rgba(247, 243, 232, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(23, 23, 23, 0.08);
+}
