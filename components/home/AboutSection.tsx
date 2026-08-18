@@ -98,7 +98,7 @@ export default function AboutSection() {
 
             <Reveal delay={0.4} className="mt-10">
               <Button href="/about" variant="charcoal" size="md" withArrow>
-                READ OUR FULL STORY
+                READ OUR FULL STORYS
               </Button>
             </Reveal>
           </div>
